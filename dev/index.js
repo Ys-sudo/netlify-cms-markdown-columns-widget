@@ -30,13 +30,13 @@ CMS.registerEditorComponent({
   label: "Columns",
   name: 'columns',
   // Fields the user need to fill out when adding an instance of the component
-  // 2 columns layout - add classes field for sizes
   fields: [
     {
       name: 'class',
       label: 'Class',
-      widget: 'string',
-      default:'column'
+      widget: "select",
+      options: ["is-1","is-2","is-3","is-4","is-5","is-6","is-7","is-8","is-9","is-10","is-12"],
+      default: 'is-6'
     },
     {
       name: 'content',
@@ -47,8 +47,9 @@ CMS.registerEditorComponent({
     {
       name: 'class2',
       label: 'Class2',
-      widget: 'string',
-      default:'column'
+      widget: "select",
+      options: ["is-1","is-2","is-3","is-4","is-5","is-6","is-7","is-8","is-9","is-10","is-12"],
+      default: 'is-6'
     },
     {
       name: 'content2',
@@ -66,7 +67,7 @@ CMS.registerEditorComponent({
   //
   // Additionally, it's recommended that you use non-greedy capturing groups (e.g.
   // `(.*?)` vs `(.*)`), especially if matching against newline characters.
-  pattern: /^<columns>$\s(.*?)<\/columns>\n\n/ms,
+  pattern: /^<div class="columns">$\s(.*?)<\/div>\n\n/ms,
   // Given a RegExp Match object
   // (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match#return_value),
   // return an object with one property for each field defined in `fields`.
@@ -87,24 +88,20 @@ CMS.registerEditorComponent({
   // markdown document
   toBlock: function(data) {
     return `
-<columns>
 <div class="columns">
-<div class="${data.class}">${data.content}</div>
-<div class="${data.class2}">${data.content2}</div>
+<div class="column ${data.class}"><p>${data.content}</p></div>
+<div class="column ${data.class2}"><p>${data.content2}</p></div>
 </div>
-</columns>
 `;
   },
   // Preview output for this component. Can either be a string or a React component
   // (component gives better render performance)
   toPreview: function(data) {
     return `
-<columns>
 <div class="columns">
-  <div class="${data.class}">${data.content}</div>
-  <div class="${data.class2}">${data.content2}</div>
+  <div class="${data.class}"><p>${data.content}</p></div>
+  <div class="${data.class2}"><p>${data.content2}</p></div>
 </div>
-</columns>
 `;
   }
 });
