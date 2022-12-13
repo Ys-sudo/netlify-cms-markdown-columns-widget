@@ -1,0 +1,51 @@
+{
+  "name": "netlify-cms-markdown-columns-widget",
+  "version": "1.0.0",
+  "description": "A subcomponent for the netlify-cms-widget-markdown allowing the insertion of column layouts based on bulma css column grid and sizes.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-serve --static public --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ys-sudo/netlify-cms-markdown-columns-widget.git"
+  },
+  "keywords": [
+    "netlify-cms",
+    "netlify-cms-widget-markdown",
+    "columns",
+    "bulma"
+  ],
+  "author": "Georgios Lazaridis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ys-sudo/netlify-cms-markdown-columns-widget/issues"
+  },
+  "homepage": "https://github.com/Ys-sudo/netlify-cms-markdown-columns-widget#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.2",
+    "html-webpack-plugin": "^5.5.0",
+    "netlify-cms": "^2.10.192",
+    "react": "^18.2.0",
+    "source-map-loader": "^4.0.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-serve": "^4.0.0"
+  },
+  "dependencies": {
+    "bulma": "^0.9.4",
+    "prop-types": "^15.8.1"
+  },
+  "peerDependencies": {
+    "react": "^16"
+  }
+}
