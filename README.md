@@ -11,3 +11,5 @@
 
 To register the widget, add the ```editor_components:['image','code-block','columns-layout','columns-layout-3','columns-layout-4']```, to every markdown widget in your ```config.yaml``` file. Then add the ```CMS.registerEditorComponent({...})``` modules to your ```cms.js``` file. If you have bulma imported or custom classes made for the columns then you are all set and done!
 
+If you have any problems adding the modules to netlify cms follow the [official guide](https://www.netlifycms.org/docs/custom-widgets/#registereditorcomponent).
+
